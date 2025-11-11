@@ -31,7 +31,6 @@ export default function LoginPage() {
       })
       if (error) throw error
       if (data.user) {
-        // Add a small delay to ensure session is established
         setTimeout(() => {
           router.push("/dashboard")
         }, 500)
@@ -46,6 +45,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex">
+      {/* Lado esquerdo com logo */}
       <div
         className="w-1/3 flex flex-col items-center justify-center p-8"
         style={{ background: "linear-gradient(135deg, #5B7FFF 0%, #7D5FFF 50%)" }}
@@ -56,6 +56,7 @@ export default function LoginPage() {
         <h1 className="text-white text-3xl font-bold">Taskly</h1>
       </div>
 
+      {/* Lado direito com formulário */}
       <div
         className="w-2/3 flex items-center justify-center p-4"
         style={{ background: "linear-gradient(135deg, #A8A5FF 0%, #D4A5FF 100%)" }}
@@ -80,6 +81,7 @@ export default function LoginPage() {
                   className="mt-2 bg-gray-200 border-0 text-gray-600 placeholder-gray-400 rounded-lg py-3"
                 />
               </div>
+
               <div>
                 <Label htmlFor="password" className="text-gray-700 font-semibold text-sm">
                   Senha
@@ -105,6 +107,7 @@ export default function LoginPage() {
                 >
                   {isLoading ? <Spinner /> : "Entrar"}
                 </Button>
+
                 <Link href="/auth/sign-up" className="flex-1">
                   <Button
                     type="button"
@@ -115,15 +118,11 @@ export default function LoginPage() {
                 </Link>
               </div>
 
-              <div className="text-center text-xs text-gray-600 pt-1">
-                <span>Esqueceu a conta? </span>
-                <Link href="/auth/sign-up" className="text-green-600 font-bold hover:underline">
-                  Cadastre-se
-                </Link>
-              </div>
-
-              <div className="text-center text-xs text-gray-600">
-                <Link href="/auth/forgot-password" className="text-green-600 font-bold hover:underline">
+              <div className="text-center text-xs text-gray-600 mt-1">
+                <Link
+                  href="/auth/forgot-password"
+                  className="text-green-600 font-bold hover:underline"
+                >
                   Esqueci a senha
                 </Link>
               </div>

@@ -121,13 +121,6 @@ export default function ForgotPasswordPage() {
                   </p>
                   <p className="text-gray-600 text-sm">Aguarde para nova senha</p>
                 </div>
-
-                <Button
-                  onClick={() => setIsSuccessOpen(false)}
-                  className="mt-6 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded-lg"
-                >
-                  Fechar
-                </Button>
               </div>
             </div>
           </div>
