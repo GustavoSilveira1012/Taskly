@@ -34,7 +34,7 @@ export function Sidebar() {
   ]
 
   return (
-    <aside className="w-64 bg-gradient-to-b from-blue-500 to-purple-600 text-white flex flex-col h-screen p-6 shadow-xl">
+    <aside className="w-64 bg-gradient-to-b from-blue-500 to-purple-600 text-white flex flex-col h-220 p-6 shadow-xl">
       <Link
         href="/dashboard"
         className="flex items-center gap-3 mb-12 text-2xl font-bold hover:opacity-90 transition-opacity"
